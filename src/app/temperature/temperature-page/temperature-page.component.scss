@@ -1,0 +1,76 @@
+.title-container {
+  margin-top: 20px;
+  width: 90%;
+  padding: 10px 20px;
+  max-width: 1000px;
+
+  .page-title {
+    font-weight: 600;
+    font-size: 28px;
+  }
+
+  .page-subtitle {
+    font-size: 14px;
+  }
+}
+
+.card-container {
+  border-radius: 10px;
+  border: 2px solid #112e38;
+  padding: 10px 15px;
+  margin-top: 20px;
+  min-width: 270px;
+
+  .card-title {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .input-field {
+    label {
+      margin-bottom: 0;
+      font-weight: 600;
+    }
+    span {
+      font-size: 16px;
+      font-weight: 600;
+      font-style: italic;
+    }
+  }
+
+  button.btn {
+    min-width: 100px;
+    width: 100px;
+  }
+
+  .form-control {
+    width: 100px;
+    min-width: 100px;
+  }
+}
+
+.input-section {
+  width: 100%;
+  max-width: 1200px;
+  padding-left: 15px;
+}
+
+.button-container {
+  margin: 20px;
+  width: 100%;
+  max-width: 800px;
+}
+
+.data-section {
+  margin: 20px;
+  width: 90%;
+  padding: 10px 20px;
+  max-width: 1000px;
+  background: #f1f1f1;
+  min-height: 400px;
+
+  .section-title {
+    font-size: 18px;
+    font-weight: 600;
+  }
+}

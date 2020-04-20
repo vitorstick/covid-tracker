@@ -1,0 +1,57 @@
+.font-medium {
+    font-size: 14px;
+}
+
+.font-bold {
+    font-weight: bold;
+}
+
+.title-text {
+    font-weight: 500;
+    color: lightslategray;
+}
+
+.mouse-hover {
+    cursor: pointer;
+}
+
+.padding-left-normal {
+    padding-left: 15px;
+}
+
+.padding-right-normal {
+    padding-right: 15px;
+}
+
+.padding-top-normal {
+    padding-top: 15px;
+}
+
+.padding-bottom-small {
+    padding-bottom: 10px;
+}
+
+.padding-top-small {
+    padding-top: 10px;
+}
+
+.margin-top-normal {
+    margin-top: 15px;
+}
+
+.margin-bottom-normal {
+    margin-bottom: 15px;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.link {
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}

@@ -1,0 +1,52 @@
+<div
+  class="form-container form-container--register"
+  fxLayout="column"
+  fxLayoutAlign="center center"
+>
+  <div class="img-container">
+    <img src="./assets/imgs/nevaro.png" alt="icon image" />
+  </div>
+  <form [formGroup]="registerForm" fxLayout="column" fxLayoutGap="15px">
+    <div class="subtitle">
+      Register
+    </div>
+    <div class="form-group">
+      <input
+        type="email"
+        class="form-control"
+        id="exampleInputEmail1"
+        aria-describedby="email"
+        placeholder="E-mail"
+        formControlName="email"
+      />
+    </div>
+    <div class="form-group">
+      <input
+        type="password"
+        class="form-control"
+        id="exampleInputPassword1"
+        placeholder="Password"
+        formControlName="password"
+      />
+    </div>
+
+    <div class="button-container" fxLayoutAlign="center center">
+      <button
+        type="button"
+        class="btn btn-warning"
+        (click)="doRegister()"
+        [disabled]="!registerForm.valid"
+      >
+        Registar
+      </button>
+    </div>
+    <div
+      class="links-container"
+      fxLayoutAlign="center center"
+      fxLayout="column"
+      fxLayoutGap="5px"
+    >
+      <a routerLink="/login">Login</a>
+    </div>
+  </form>
+</div>

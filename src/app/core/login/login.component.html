@@ -1,0 +1,101 @@
+<div
+  class="form-container form-container--login"
+  fxLayout="column"
+  fxLayoutAlign="center center"
+>
+  <div class="img-container">
+    <img src="./assets/imgs/nevaro.png" alt="icon image" />
+  </div>
+  <ng-container *ngIf="!showRecoverPass">
+    <form [formGroup]="loginForm" fxLayout="column" fxLayoutGap="15px">
+      <div class="subtitle">
+        Login
+      </div>
+      <div class="form-group">
+        <input
+          type="email"
+          class="form-control"
+          id="exampleInputEmail1"
+          aria-describedby="email"
+          placeholder="E-mail"
+          formControlName="email"
+        />
+      </div>
+      <div class="form-group">
+        <input
+          type="password"
+          class="form-control"
+          id="exampleInputPassword1"
+          placeholder="Password"
+          formControlName="password"
+        />
+      </div>
+
+      <div class="button-container" fxLayoutAlign="center center">
+        <button
+          type="button"
+          class="btn btn-warning"
+          (click)="doLogin()"
+          [disabled]="!loginForm.valid"
+        >
+          entrar
+        </button>
+      </div>
+      <div
+        class="links-container"
+        fxLayoutAlign="center center"
+        fxLayout="column"
+        fxLayoutGap="5px"
+      >
+        <a (click)="showRecoverPassForm()">Recuperar Senha</a>
+        <a routerLink="/register">Novo Registo</a>
+      </div>
+    </form>
+  </ng-container>
+
+  <ng-container *ngIf="showRecoverPass">
+    <form [formGroup]="recoverPassForm" fxLayout="column" fxLayoutGap="15px">
+      <div class="subtitle">
+        Recuperar Palavra Pass
+      </div>
+      <div class="form-group">
+        <input
+          type="email"
+          class="form-control"
+          id="exampleInputEmail1"
+          aria-describedby="email"
+          placeholder="E-mail"
+          formControlName="email"
+        />
+      </div>
+
+      <div class="button-container" fxLayoutAlign="center center">
+        <button
+          type="button"
+          class="btn btn-warning"
+          (click)="recoverPass()"
+          [disabled]="!recoverPassForm.valid"
+        >
+          Submeter
+        </button>
+      </div>
+      <div
+        class="links-container"
+        fxLayoutAlign="center center"
+        fxLayout="column"
+        fxLayoutGap="5px"
+      >
+        <a (click)="showRecoverPassForm()">Login</a>
+      </div>
+    </form>
+  </ng-container>
+
+  <div
+    class="footer-container"
+    fxLayout="row"
+    fxLayoutAlign="space-around center"
+  >
+    <img src="./assets/imgs/fmul_logo.png" alt="fmul_logo image" />
+    <img src="./assets/imgs/logo_ciencias.png" alt="logo_ciencias image" />
+  </div>
+</div>

@@ -1,0 +1,28 @@
+<!-- <ng-container *ngIf="user"></ng-container> -->
+<nav
+  class="navbar-header mat-elevation-z6"
+  fxLayout="column"
+  fxLayoutAlign="center center"
+  [class.nav-visible]="!!user"
+>
+  <div class="nav-container" fxLayout="row">
+    <div class="left-nav">
+      <a mat-button class="nav-item" routerLink="/">Nevaro 4 COVID</a>
+    </div>
+    <div
+      class="righ-nav"
+      fxLayout="row"
+      fxLayoutGap="10px"
+      fxLayoutAlign="center center"
+    >
+      <ng-container *ngIf="isUserLoggedIn()">
+        <div class="user-details">
+          {{ userDetail?.username }}
+        </div>
+        <button mat-flat-button color="primary" (click)="doLogout()">
+          Logout
+        </button>
+      </ng-container>
+    </div>
+  </div>
+</nav>

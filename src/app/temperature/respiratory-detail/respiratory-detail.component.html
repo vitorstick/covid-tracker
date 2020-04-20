@@ -1,0 +1,43 @@
+<div
+  class="detail-container"
+  fxLayout="row"
+  fxLayout.lt-md="column"
+  fxLayoutGap="15px"
+>
+  <div class="list-container" fxLayout="column" fxFlex="100%">
+    <div class="list-header" fxLayout="row">
+      <div class="list-header--item" fxFlex="40%">Data e Hora</div>
+      <div class="list-header--item" fxFlex="30%">
+        Lábios ou unhas azulados?
+      </div>
+      <div class="list-header--item" fxFlex="30%">Apresenta tosse?</div>
+    </div>
+    <div class="list-body" fxLayout="column">
+      <ng-container *ngFor="let entry of entries">
+        <div class="list-row" fxLayout="row">
+          <div
+            class="list-row--item"
+            fxFlex="40%"
+            fxLayoutAlign="center center"
+          >
+            {{ entry?.date }}
+          </div>
+          <div
+            class="list-row--item"
+            fxFlex="30%"
+            fxLayoutAlign="center center"
+          >
+            {{ entry?.nailsLipsBlueValue }}
+          </div>
+          <div
+            class="list-row--item"
+            fxFlex="30%"
+            fxLayoutAlign="center center"
+          >
+            {{ entry?.coughValue }}
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+.navbar-header {
+  display: flex;
+  padding: 5px 0;
+  // position: absolute;
+  // top: 0;
+  // left: 0;
+  // right: 0;
+  visibility: hidden;
+
+  &.nav-visible {
+    visibility: visible;
+  }
+
+  .nav-container {
+    width: 100%;
+    max-width: 1000px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .mat-button {
+    font-weight: bold;
+  }
+
+  .righ-nav {
+    margin-right: 20px;
+
+    .user-details {
+      font-size: 16px;
+      font-weight: 600;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+.list-container {
+  .list-header {
+    color: white;
+    background: #112e38;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-style: 16px;
+    font-weight: 500;
+  }
+
+  .list-header--item,
+  .list-row--item {
+    text-align: center;
+  }
+
+  .list-body {
+    height: 290px;
+    overflow-y: scroll;
+    color: #112e38;
+    border: 1px solid #112e38;
+
+    .list-row {
+      background: #e2e2e2;
+
+      &:nth-child(even) {
+        background: #f1f1f1;
+      }
+      &:nth-child(odd) {
+        background: #e2e2e2;
+      }
+
+      .list-row--item {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.chart-flex-container {
+  border: 1px solid #112e38;
+  border-radius: 5px;
+}

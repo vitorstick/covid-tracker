@@ -1,0 +1,58 @@
+<div
+  class="detail-container"
+  fxLayout="row"
+  fxLayout.lt-md="column"
+  fxLayoutGap="15px"
+>
+  <div
+    class="chart-flex-container"
+    fxLayout="column"
+    fxFlex="65%"
+    fxFlex.lt-md="100%"
+  >
+    <div class="chart-container">
+      <canvas
+        baseChart
+        [datasets]="lineChartData"
+        [labels]="lineChartLabels"
+        [options]="lineChartOptions"
+        [colors]="lineChartColors"
+        [legend]="lineChartLegend"
+        [plugins]="lineChartPlugins"
+        [chartType]="lineChartType"
+      ></canvas>
+    </div>
+  </div>
+
+  <div
+    class="list-container"
+    fxLayout="column"
+    fxFlex="35%"
+    fxFlex.lt-md="100%"
+  >
+    <div class="list-header" fxLayout="row">
+      <div class="list-header--item" fxFlex="50%">Data e Hora</div>
+      <div class="list-header--item" fxFlex="50%">Valor</div>
+    </div>
+    <div class="list-body" fxLayout="column">
+      <ng-container *ngFor="let entry of entries">
+        <div class="list-row" fxLayout="row">
+          <div
+            class="list-row--item"
+            fxFlex="50%"
+            fxLayoutAlign="center center"
+          >
+            {{ entry?.date }}
+          </div>
+          <div
+            class="list-row--item"
+            fxFlex="50%"
+            fxLayoutAlign="center center"
+          >
+            {{ entry?.value }}
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>

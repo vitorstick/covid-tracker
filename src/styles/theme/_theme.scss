@@ -1,0 +1,46 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+$custom-typography: mat-typography-config(
+  $font-family: '"Roboto", sans-serif;'
+);
+@include mat-core($custom-typography);
+
+$md-mcvitor: (
+  50: #e0eae8,
+  100: #b3c9c5,
+  200: #80a69f,
+  300: #4d8279,
+  400: #26675c,
+  500: #004c3f,
+  600: #004539,
+  700: #003c31,
+  800: #003329,
+  900: #00241b,
+  A100: #5fffcc,
+  A200: #2cffbc,
+  A400: #00f8a9,
+  A700: #00df98,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #ffffff,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000
+  )
+);
+// Define the default theme (same as the example above).
+$candy-app-primary: mat-palette($md-mcvitor);
+$candy-app-accent: mat-palette($md-mcvitor, A200, A100, A400);
+$candy-app-theme: mat-light-theme($candy-app-primary, $candy-app-accent);
+// Include the default theme styles.
+@include angular-material-theme($candy-app-theme);
