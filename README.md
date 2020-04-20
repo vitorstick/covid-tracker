@@ -1,6 +1,6 @@
 # CovidPatientTracker
 
-# Project created for NEVARO Startup 
+Project created for NEVARO Startup 
 
 With this project you can track the patient biometric data, like temperature, cardiac rythm, Arterial Pressure, etc, and have all the data shown to you in graph and in table
 
